@@ -1,0 +1,64 @@
+<app-header titulo="Inputs y Forms"></app-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Nombre: {{ nombre || 'No hay nombre' }}</ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input type="text" [(ngModel)]="nombre"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <!-- Formulario por template de angular -->
+  <form #formulario="ngForm" (ngSubmit)="onSubmitTemplate()">
+    <ion-list padding>
+      <ion-list-header>
+        <ion-label>Formulario template: Valido {{ formulario.valid }}</ion-label>
+      </ion-list-header>
+      <!-- La propiedad 'pristine' indica si el usuario ha modificado o no el valor del input
+          desde que cargó -->
+      <ion-item [ngClass]="{ 
+                    'input-valid': email.valid, 
+                    'input-invalid': !email.valid && ( !email.pristine || usuario.email ), 
+                    'input-default': email.pristine }">
+        <ion-label position="floating">
+          Email
+          <ion-icon class="ion-icon-form-label"
+                    *ngIf="!email.pristine || usuario.email" 
+                    name="{{ email.valid ? 'checkmark' : 'close' }}"
+                    color="{{ email.valid ? 'success' : 'danger' }}">
+          </ion-icon>
+        </ion-label>
+        <!-- con #email="ngModel" conseguimos que en la propiedad "email" tengamos atributos
+            que nos indican en todo momento si el email es valido, entre otras cosas -->
+        <ion-input #email="ngModel" type="email" name="email" [(ngModel)]="usuario.email" required
+                    pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$">
+        </ion-input>
+      </ion-item>
+      <ion-item [ngClass]="{ 
+        'input-valid': password.valid, 
+        'input-invalid': !password.valid && ( !password.pristine || usuario.password ), 
+        'input-default': password.pristine }">
+          <ion-label position="floating">
+            Contraseña
+            <ion-icon class="ion-icon-form-label"
+                    *ngIf="!password.pristine || usuario.password" 
+                    name="{{ password.valid ? 'checkmark' : 'close' }}"
+                    color="{{ password.valid ? 'success' : 'danger' }}">
+            </ion-icon>
+          </ion-label>
+          <ion-input #password="ngModel" type="password" name="password" [(ngModel)]="usuario.password" required 
+                      minlength="8">
+            </ion-input>
+        </ion-item>
+    </ion-list>
+
+    <ion-button expand="full" type="submit" [disabled]="!formulario.valid">
+      Enviar
+    </ion-button>
+  </form>
+
+</ion-content>

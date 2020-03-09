@@ -1,0 +1,24 @@
+<ion-menu side="start" menuId="primerMenu" contentId="principal">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Menú principal</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <!-- ion-menu-toggle para cerrar el menu al entrar dentro de una página del menú -->
+        <ion-menu-toggle routerLink="/inicio" routerDirection="root">
+          <ion-item>
+            <ion-icon slot="start" name="home"></ion-icon>
+            <ion-label>Inicio</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle *ngFor="let c of componentes | async" [routerLink]="c.redirectTo">
+          <ion-item>
+            <ion-icon slot="start" [name]="c.icon"></ion-icon>
+            <ion-label>{{ c.name }}</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>

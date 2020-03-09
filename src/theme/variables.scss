@@ -74,4 +74,103 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  /** Youtube **/
+  --ion-color-youtube: #ff2e02;
+  --ion-color-youtube-rgb: 255,46,2;
+  --ion-color-youtube-contrast: #ffffff;
+  --ion-color-youtube-contrast-rgb: 255,255,255;
+  --ion-color-youtube-shade: #e02802;
+  --ion-color-youtube-tint: #ff431b;
+
+  /** Twitter **/
+  --ion-color-twitter: #35bcff;
+  --ion-color-twitter-rgb: 53,188,255;
+  --ion-color-twitter-contrast: #000000;
+  --ion-color-twitter-contrast-rgb: 0,0,0;
+  --ion-color-twitter-shade: #2fa5e0;
+  --ion-color-twitter-tint: #49c3ff;
+
+  /** Facebook **/
+  --ion-color-facebook: #131dff;
+  --ion-color-facebook-rgb: 19,29,255;
+  --ion-color-facebook-contrast: #ffffff;
+  --ion-color-facebook-contrast-rgb: 255,255,255;
+  --ion-color-facebook-shade: #111ae0;
+  --ion-color-facebook-tint: #2b34ff;
+}
+
+.fab-button-in-list.youtube  {
+  --ion-color-base: var(--ion-color-youtube);
+  --ion-color-base-rgb: var(--ion-color-youtube-rgb);
+  --ion-color-contrast: var(--ion-color-youtube-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-youtube-contrast-rgb);
+  --ion-color-shade: var(--ion-color-youtube-shade);
+  --ion-color-tint: var(--ion-color-youtube-tint);
+
+  --background: var(--ion-color-youtube);
+  --background-activated: var(--ion-color-youtube-rgb);
+  --background-focused: var(--ion-color-youtube-contrast);
+  --color: var(--ion-color-primary-contrast,#fff);
+  --color-activated: var(--ion-color-primary-contrast,#fff);
+  --color-focused: var(--color-activated);
+}
+
+.fab-button-in-list.twitter  {
+  --ion-color-base: var(--ion-color-twitter);
+  --ion-color-base-rgb: var(--ion-color-twitter-rgb);
+  --ion-color-contrast: var(--ion-color-twitter-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-twitter-contrast-rgb);
+  --ion-color-shade: var(--ion-color-twitter-shade);
+  --ion-color-tint: var(--ion-color-twitter-tint);
+
+  --background: var(--ion-color-twitter);
+  --background-activated: var(--ion-color-twitter-rgb);
+  --background-focused: var(--ion-color-twitter-contrast);
+  --color: var(--ion-color-primary-contrast,#fff);
+  --color-activated: var(--ion-color-primary-contrast,#fff);
+  --color-focused: var(--color-activated);
+}
+
+.fab-button-in-list.facebook  {
+  --ion-color-base: var(--ion-color-facebook);
+  --ion-color-base-rgb: var(--ion-color-facebook-rgb);
+  --ion-color-contrast: var(--ion-color-facebook-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-facebook-contrast-rgb);
+  --ion-color-shade: var(--ion-color-facebook-shade);
+  --ion-color-tint: var(--ion-color-facebook-tint);
+
+  --background: var(--ion-color-facebook);
+  --background-activated: var(--ion-color-facebook-rgb);
+  --background-focused: var(--ion-color-facebook-contrast);
+  --color: var(--ion-color-primary-contrast,#fff);
+  --color-activated: var(--ion-color-primary-contrast,#fff);
+  --color-focused: var(--color-activated);
+}
+
+.ion-color-youtube  {
+  --ion-color-base: var(--ion-color-youtube);
+  --ion-color-base-rgb: var(--ion-color-youtube-rgb);
+  --ion-color-contrast: var(--ion-color-youtube-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-youtube-contrast-rgb);
+  --ion-color-shade: var(--ion-color-youtube-shade);
+  --ion-color-tint: var(--ion-color-youtube-tint);
+}
+
+.ion-color-twitter  {
+  --ion-color-base: var(--ion-color-twitter);
+  --ion-color-base-rgb: var(--ion-color-twitter-rgb);
+  --ion-color-contrast: var(--ion-color-twitter-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-twitter-contrast-rgb);
+  --ion-color-shade: var(--ion-color-twitter-shade);
+  --ion-color-tint: var(--ion-color-twitter-tint);
+}
+
+.ion-color-facebook  {
+  --ion-color-base: var(--ion-color-facebook);
+  --ion-color-base-rgb: var(--ion-color-facebook-rgb);
+  --ion-color-contrast: var(--ion-color-facebook-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-facebook-contrast-rgb);
+  --ion-color-shade: var(--ion-color-facebook-shade);
+  --ion-color-tint: var(--ion-color-facebook-tint);
 }

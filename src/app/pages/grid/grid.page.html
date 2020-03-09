@@ -1,0 +1,29 @@
+<app-header titulo="Grid - Rows"></app-header>
+
+<ion-content padding fullScreen> <!-- Va a traspasar el header - > anyadir 'translucent' en el header -->
+
+  <ion-grid fixed> <!-- Añade un margen a los lados. Mejora la visualización en un navegador -->
+    <ion-row>
+      <ion-col *ngFor="let c of [1,1,1,1,1,1,1,1,1,1,1,1]; let i = index">
+        Hola, item {{ i + 1 }}
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <!-- size: especifica el ancho que queremos que ocupe una columna (12 posiciones, 3 posiciones, 4...) -->
+      <ion-col size="12" size-lg="3" size-md="4" size-sm="6" size-xs="12"
+                *ngFor="let c of [1,1,1,1,1,1,1,1,1,1,1,1]; let i = index">
+        <ion-card>
+          <ion-img src="/assets/shapes.svg"></ion-img>
+          <ion-card-header>
+            <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+            <ion-card-title>Card Title</ion-card-title>
+            <ion-card-content>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum, delectus! Quidem, quos beatae. Quae nesciunt illo, recusandae doloribus vel voluptate pariatur? Quae, nesciunt culpa maiores quis ipsa quidem nostrum explicabo!</ion-card-content>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>
